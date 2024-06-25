@@ -17,6 +17,7 @@ class LittleManComputer:
 
     def load_program(self, program):
         for address, instruction in enumerate(program):
+            print(address,instruction)
             self.memory[address] = instruction
 
     def fetch(self):
@@ -71,6 +72,7 @@ class LittleManComputer:
             opcode, operand = self.decode(instruction)
             self.execute(opcode, operand)
 
+    
 
 # Example program to load into LMC (add two numbers)
 program = [
