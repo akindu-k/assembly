@@ -6,7 +6,7 @@ class LittleManComputer:
         self.pc = 0
         self.running = True
         self.instruction_set = {
-           # 0 : self.halt,
+            0 : self.halt,
             1 : self.add,
             2 : self.sub,
             3 : self.store,
@@ -71,15 +71,15 @@ class LittleManComputer:
             self.accumulator = int(input("Input: "));
         
         elif (operand == 2):
-            self.accumulator = int(input("Input: "));
+            print(f"Output: {self.accumulator}");
         
         else:
             print(f"Invalid operand {operand} for io_operations");
             self.running = False;
     
-    #def halt(self,operand):
-     #   if (operand == 0):
-      #      self.running = False;
+    def halt(self,operand):
+        if (operand == 0):
+           self.running = False;
         
     def run(self):
         while(self.running):
@@ -87,10 +87,28 @@ class LittleManComputer:
             opcode , operand = self.decode(instruction);
             self.execute(opcode,operand);
         
-
+"""
         
+def main():
+    n = int(input("Number of lines:"));
+    for 
     
-
+    
+    
+    mask = {
+        "HLT" : 0,
+        "ADD" : 1,
+        "SUB" : 2,
+        "STA" : 3,
+        "LDA" : 5,
+        "BRA" : 6
+        "BRZ" : 7,
+        "BRP" : 8,
+        #in out hithanna
+        
+    }
+    
+"""
 
 
 program = [
